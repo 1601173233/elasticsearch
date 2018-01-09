@@ -1,4 +1,4 @@
-package MyTest.elasticsearch;
+package hyj.elasticsearch;
 
 /**
  * Hello world!

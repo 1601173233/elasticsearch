@@ -5,7 +5,7 @@ package hyj.elasticsearch.util;
  */
 public class Contants {
 	/** ES的集群的名字 **/
-	public static final String  ELASTIC_CLUSTER_NAME = "minstoneSearch";
+	public static final String  ELASTIC_CLUSTER_NAME = "test";
 	/** ES的ip地址 **/
 	public static final String  ELASTIC_SERVICE_IP = "127.0.0.1";
 	/** ES的端口号**/

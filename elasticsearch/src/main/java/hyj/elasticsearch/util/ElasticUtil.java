@@ -1,11 +1,15 @@
 package hyj.elasticsearch.util;
 
+import java.io.IOException;
 import java.net.InetAddress;
 import java.net.UnknownHostException;
+import java.util.Iterator;
+import java.util.Map;
 
 import org.elasticsearch.client.transport.TransportClient;
 import org.elasticsearch.common.settings.Settings;
 import org.elasticsearch.common.transport.InetSocketTransportAddress;
+import org.elasticsearch.common.xcontent.XContentBuilder;
 import org.elasticsearch.transport.client.PreBuiltTransportClient;
 /**
  * es工具类
@@ -45,5 +49,22 @@ public class ElasticUtil {
 						.getByName(ip), port));
 		
 		return client;
+	}
+	
+	/**
+	 * 添加参数
+	 * @param map
+	 * @return 
+	 * @throws IOException 
+	 */
+	public static XContentBuilder addFields1(Map<String, Object> map, XContentBuilder builder) throws IOException {
+		Iterator<Map.Entry<String, Object>> it = map.entrySet().iterator();
+		
+		while (it.hasNext()) {
+			Map.Entry<String, Object> entry = it.next();
+			builder = builder.field(entry.getKey(), entry.getValue());
+		}
+		
+		return builder;
 	}
 }

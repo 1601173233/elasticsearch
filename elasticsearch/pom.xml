@@ -30,6 +30,12 @@
 		</dependency>
 
 		<dependency>
+			<groupId>org.elasticsearch</groupId>
+			<artifactId>elasticsearch</artifactId>
+			<version>5.1.1</version>
+		</dependency>
+
+		<dependency>
 			<groupId>org.apache.logging.log4j</groupId>
 			<artifactId>log4j-api</artifactId>
 			<version>2.7</version>
@@ -39,13 +45,12 @@
 			<artifactId>log4j-core</artifactId>
 			<version>2.7</version>
 		</dependency>
-		
+
 		<!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-core -->
 		<dependency>
 			<groupId>com.fasterxml.jackson.core</groupId>
-			<artifactId>jackson-core</artifactId>
+			<artifactId>jackson-databind</artifactId>
 			<version>2.9.2</version>
 		</dependency>
-
 	</dependencies>
 </project>

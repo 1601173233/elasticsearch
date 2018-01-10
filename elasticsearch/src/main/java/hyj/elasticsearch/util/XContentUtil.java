@@ -1,10 +1,12 @@
 package hyj.elasticsearch.util;
 
 import java.io.IOException;
+import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 
 import org.elasticsearch.common.xcontent.XContentBuilder;
+import org.elasticsearch.common.xcontent.XContentFactory;
 /**
  * 
  * @Description: XContentUtil的操作类
@@ -33,5 +35,17 @@ public class XContentUtil {
 		}
 		
 		return builder;
+	}
+	
+	public static void main(String arg[]) throws IOException{
+		Map<String ,Object> map = new HashMap<String, Object>();
+		String arg1[] = {"222","333"};
+		map.put("1111", arg1);
+		map.put("1112", arg1);
+		XContentBuilder builder = XContentFactory.jsonBuilder();
+		builder = builder.startObject();
+		builder = addFields(map, builder);
+		builder = builder.endObject();
+		System.out.println(builder.string());
 	}
 }

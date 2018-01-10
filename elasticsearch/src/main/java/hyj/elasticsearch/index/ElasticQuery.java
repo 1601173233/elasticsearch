@@ -6,11 +6,7 @@ import java.net.UnknownHostException;
 import java.util.Map;
 
 import org.elasticsearch.action.get.GetResponse;
-import org.elasticsearch.action.index.IndexResponse;
 import org.elasticsearch.client.transport.TransportClient;
-
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
 /**
  * 
  * @Description: Es查询类
@@ -49,7 +45,7 @@ public class ElasticQuery {
 				"\"message\":\"trying out Elasticsearch\"" +
 				"}";
 		
-		System.out.println(getById("text", "text", "2"));
+		System.out.println(getById("text", "text", "1"));
 
 	}
 
